@@ -143,6 +143,15 @@ footer p{max-width:46rem}
   <div class="wrap">
     <div class="brand">
       <span><strong>UTPL</strong> · Modalidad en línea · Carrera de Tecnologías de la Información</span>
+      <div class="language-selector">
+  🌐 Idioma:
+  <select id="languageSelect" onchange="changeLanguage(this.value)">
+    <option value="es" selected>🇪🇸 Español</option>
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="pt">🇵🇹 Português</option>
+  </select>
+</div>
       <nav class="site" aria-label="Secciones del sitio">
         <ul>
           <li><a href="#cronograma">Cronograma</a></li>
@@ -492,6 +501,15 @@ footer p{max-width:46rem}
     btn.textContent = "⏹️ Detener lectura";
   });
 })();
+</script>
+  <script>
+function changeLanguage(lang) {
+  if (lang === "es") {
+    window.location.href = "index.html";
+  } else if (lang === "en") {
+    window.location.href = "en.html";
+  }
+}
 </script>
 </body>
 </html>
