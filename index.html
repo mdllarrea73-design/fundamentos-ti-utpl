@@ -134,6 +134,17 @@ footer p{max-width:46rem}
 @media print{
   header.top{background:none;color:#000}.quick,nav.site,#tareas,.skip{display:none}
 }
+  /* Mantener visible la barra de iconos */
+nav.site {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Evitar que la barra tape el contenido */
+html {
+  scroll-padding-top: 90px;
+}
 </style>
 </head>
 <body>
