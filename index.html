@@ -171,7 +171,11 @@ nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px
 <body>
 <a class="skip" href="#principal">Saltar al contenido</a>
 
-<header class="top">
+<nav class="site" aria-label="Secciones del sitio"><div class="nav-inner">
+<a class="home-link" href="#inicio">🏠 Inicio</a>
+<ul><li><a href="#cronograma">Cronograma</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#contacto">Contacto</a></li><li><a href="#tareas">Mi lista</a></li></ul>
+<div class="language-selector"><label for="languageSelect">🌐 Idioma:</label><select id="languageSelect" onchange="changeLanguage(this.value)"><option value="es" selected>🇪🇸 Español</option><option value="en">🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="pt">🇵🇹 Português</option></select></div>
+</div></nav><header class="top">
   <div class="wrap" id="inicio">
     <div class="brand">
       <span><strong>UTPL</strong> · Modalidad en línea · Carrera de Tecnologías de la Información</span>
@@ -192,11 +196,7 @@ nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px
     <p class="hero-meta">COMP_1082 · Primer ciclo · 3 créditos, 144 horas · Período abril–agosto 2026. Este sitio resume las semanas 1 a 4 del primer bimestre según el plan docente aprobado (Acta n.º 21, 23-12-2025).</p>
   </div>
 </header>
-<nav class="site" aria-label="Secciones del sitio"><div class="nav-inner">
-<a class="home-link" href="#inicio">🏠 Inicio</a>
-<ul><li><a href="#cronograma">Cronograma</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#contacto">Contacto</a></li><li><a href="#tareas">Mi lista</a></li></ul>
-<div class="language-selector"><label for="languageSelect">🌐 Idioma:</label><select id="languageSelect" onchange="changeLanguage(this.value)"><option value="es" selected>🇪🇸 Español</option><option value="en">🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="pt">🇵🇹 Português</option></select></div>
-</div></nav>
+
 <main id="principal">
   <div class="wrap">
     <nav class="quick" aria-label="Accesos rápidos">
