@@ -50,22 +50,19 @@ header.top .wrap{padding-top:1.1rem;padding-bottom:2.4rem}
 nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1rem;margin:0;padding:0}
 nav.site a{color:#fff;text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
 nav.site a:hover{border-color:var(--gold)}
-  nav.site {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: #0B3C6E;
-}
-
-html {
-  scroll-padding-top: 100px;}
+nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px}
+nav.site .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+nav.site ul{display:flex;align-items:center;justify-content:center;gap:8px 20px;flex-wrap:wrap}
+nav.site .home-link{color:white;text-decoration:none;white-space:nowrap;font-weight:700;border:1px solid #ffffff80;border-radius:7px;padding:5px 10px}
+nav.site .language-selector{display:flex;align-items:center;gap:8px;color:white;font-size:.95rem;white-space:nowrap}
+nav.site select{max-width:160px;padding:6px;border-radius:5px;background:white;color:#14202E}
+html{scroll-padding-top:115px}
+@media(max-width:650px){nav.site .nav-inner{justify-content:center}nav.site ul{order:3;width:100%}nav.site .language-selector{margin-left:auto}nav.site{padding:8px}html{scroll-padding-top:155px}}
 .hero-title{font-size:clamp(2.2rem,7vw,4.1rem);font-weight:800;letter-spacing:-.02em;margin:2.2rem 0 .6rem;max-width:15ch}
 .hero-meta{margin:0;color:#DCE7F3;max-width:44rem}
 
 /* Tres acciones */
-.quick{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:-1.6rem;position:relative}
+.quick{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:0rem;position:relative}
 .quick a{display:block;background:var(--card);color:var(--ink);text-decoration:none;border:1px solid var(--line);border-left:6px solid var(--gold);padding:1.1rem 1.2rem;border-radius:6px}
 .quick a:hover{border-color:var(--navy);border-left-color:var(--gold)}
 .quick .q{font-family:var(--display);font-weight:700;font-size:1.15rem;display:block;color:var(--navy)}
@@ -145,33 +142,17 @@ footer p{max-width:46rem}
 @media print{
   header.top{background:none;color:#000}.quick,nav.site,#tareas,.skip{display:none}
 }
-  body {
-  padding-top: 110px;
-}
 </style>
 </head>
 <body>
 <a class="skip" href="#principal">Skip to content</a>
-<nav class="site" aria-label="Site sections">
-  <ul>
-    <li><a href="#inicio">🏠 Home</a></li>
-    <li><a href="#cronograma">Schedule</a></li>
-    <li><a href="#recursos">Resources</a></li>
-    <li><a href="#contacto">Contact</a></li>
-    <li><a href="#tareas">My list</a></li>
-  </ul>
-  <div class="language-selector">
-    🌐 Language:
-    <select id="languageSelect" onchange="changeLanguage(this.value)">
-      <option value="es">🇪🇸 Español</option>
-      <option value="en" selected>🇬🇧 English</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="pt">🇵🇹 Português</option>
-    </select>
-  </div>
-</nav>
+<nav class="site" aria-label="Site sections"><div class="nav-inner">
+<a class="home-link" href="#inicio">🏠 Home</a>
+<ul><li><a href="#cronograma">Schedule</a></li><li><a href="#recursos">Resources</a></li><li><a href="#contacto">Contact</a></li><li><a href="#tareas">My list</a></li></ul>
+<div class="language-selector"><label for="languageSelect">🌐 Language:</label><select id="languageSelect" onchange="changeLanguage(this.value)"><option value="es">🇪🇸 Español</option><option value="en" selected>🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="pt">🇵🇹 Português</option></select></div>
+</div></nav>
 <header class="top">
-  <div class="wrap">
+  <div class="wrap" id="inicio">
     <div class="brand">
       <span><strong>UTPL</strong> · Online modality · Information Technology Program</span>
      
@@ -240,7 +221,7 @@ footer p{max-width:46rem}
             <ul class="topics"><li>1.3 Internet</li></ul>
             <ul class="acts">
               <li><span class="tag acd">ACD</span><span>Participate in the tutorial session covering Unit 1 and ask any questions you may have.</span><span class="hrs">2 h</span><span class="res">Tutorial chat, Week 2</span></li>
-              <li><span class="tag">AA</span><span>Complete the guide using the short video and take notes on dates, concepts, and examples.</span><span class="hrs">1 h</span><span class="res"><span class="res">Micro-video Unit 1: Evolution of Information Technology</span></span></li>
+              <li><span class="tag">AA</span><span>Complete the guide using the short video and take notes on dates, concepts, and examples.</span><span class="hrs">1 h</span><span class="res">Micro-video Unit 1: Evolution of Information Technology</span></li>
               <li><span class="tag">AA</span><span>Complete the Unit 1 self-assessment.</span><span class="hrs">1,5 h</span><span class="res">Unit 1 of the virtualized guide</span></li>
               <li><span class="tag">AA</span><span>Complete the activities proposed in Unit 1.</span><span class="hrs">1,25 h</span><span class="res">Unit 1 of the virtualized guide</span></li>
             </ul>
@@ -283,7 +264,7 @@ footer p{max-width:46rem}
                 <span><strong>Graded Forum: Device Analysis Using the Von Neumann Model</strong></span>
                 <span class="hrs">8 h</span>
                 <span class="when">April 27 to May 10, 2026 · 3.5 points (35% of the first bimester)</span>
-                <span class="res">Choose an everyday or business device (for example, a smartphone, a server, or an IoT device). Diagram its data flow.</span>
+                <span class="res">Choose an everyday or business device (for example, a smartphone, a server, or an IoT device). Diagram its data flow using the input–process–output model and identify the hardware corresponding to the four Von Neumann units: main memory, arithmetic logic unit, control unit, and input/output unit. An annotated diagram or infographic with a brief technical description is recommended. Submit your work in the EVA forum.</span>
                 <details class="rubric">
                   <summary>View checklist (10 points)</summary>
                   <table>
@@ -296,13 +277,13 @@ footer p{max-width:46rem}
                   </table>
                 </details>
               </li>
-              <li><span class="tag">AA</span><span>RReview the weekly activities in the announcements.</span><span class="hrs">1 h</span><span class="res">EVA announcements</span></li>
+              <li><span class="tag">AA</span><span>Review the weekly activities in the announcements.</span><span class="hrs">1 h</span><span class="res">EVA announcements</span></li>
               <li><span class="tag">AA</span><span>Complete the Unit 2 self-assessment.</span><span class="hrs">2 h</span><span class="res">Unit 2 self-assessment</span></li>
             </ul>
           </div>
         </li>
       </ol>
-      <p class="note">he course plan sets dates only for graded activities; the start dates for weeks 1 to 3 are published in the EVA. In case of any discrepancy, the approved course plan and the instructor's instructions in the EVA shall prevail.</p>
+      <p class="note">The course plan sets dates only for graded activities; the start dates for weeks 1 to 3 are published in the EVA. In case of any discrepancy, the approved course plan and the instructor's instructions in the EVA shall prevail.</p>
     </section>
 
     <section id="recursos" aria-labelledby="t-rec">
@@ -333,7 +314,7 @@ footer p{max-width:46rem}
           <a href="https://www.youtube.com/watch?v=31q9hnrd3u0">Software: definition and development, software engineering</a>
         </li>
       </ul>
-      <p class="note">EThe use of at least two open educational resources per bimester is mandatory.</p>
+      <p class="note">The use of at least two open educational resources per bimester is mandatory.</p>
     </section>
 
     <section id="contacto" aria-labelledby="t-con">
@@ -349,7 +330,7 @@ footer p{max-width:46rem}
           <dt>Instructor</dt><dd>Dra. Germania del Rocío Rodríguez Morales</dd>
           <dt>Email</dt><dd><a href="mailto:grrodriguez@utpl.edu.ec">grrodriguez@utpl.edu.ec</a></dd>
           <dt>Phone</dt><dd><a href="tel:+59373701444">07 370 1444</a>, ext. 2521</dd>
-          <dt>Departament</dt><dd>Computer Science and Electronics</dd>
+          <dt>Department</dt><dd>Computer Science and Electronics</dd>
         </dl>
       </div>
     </section>
@@ -420,7 +401,7 @@ footer p{max-width:46rem}
   }
   function update(){
     var n = boxes.filter(function(b){ return b.checked; }).length;
-    progress.textContent = n + ' de ' + boxes.length + ' checked';
+    progress.textContent = n + ' of ' + boxes.length + ' checked';
   }
 
   boxes.forEach(function(b){
