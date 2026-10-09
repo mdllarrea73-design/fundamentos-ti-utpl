@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fondements des technologies de l’information · UTPL · abr–ago 2026</title>
-<meta name="description" content="Site da disciplina COMP_1082 Fondements des technologies de l’information (UTPL, modalidade on-line): cronograma das semaines 1 a 4 do primeiro bimestre, recursos, atividades e informações acadêmicas.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Fondements des technologies de l’information · UTPL · avr.–août 2026</title>
+<meta content="Site du cours COMP_1082 Fondements des technologies de l’information (UTPL, en ligne) : calendrier des semaines 1 à 4, ressources et activités." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --navy:#0B3C6E; --gold:#F6B800; --paper:#F7F8FA; --ink:#14202E;
@@ -50,17 +52,25 @@ header.top .wrap{padding-top:1.1rem;padding-bottom:2.4rem}
 nav.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1rem;margin:0;padding:0}
 nav.site a{color:#fff;text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
 nav.site a:hover{border-color:var(--gold)}
+nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px}
+nav.site .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+nav.site ul{display:flex;align-items:center;justify-content:center;gap:8px 20px;flex-wrap:wrap}
+nav.site .home-link{color:white;text-decoration:none;white-space:nowrap;font-weight:700;border:1px solid #ffffff80;border-radius:7px;padding:5px 10px}
+nav.site .language-selector{display:flex;align-items:center;gap:8px;color:white;font-size:.95rem;white-space:nowrap}
+nav.site select{max-width:160px;padding:6px;border-radius:5px;background:white;color:#14202E}
+html{scroll-padding-top:115px}
+@media(max-width:650px){nav.site .nav-inner{justify-content:center}nav.site ul{order:3;width:100%}nav.site .language-selector{margin-left:auto}nav.site{padding:8px}html{scroll-padding-top:155px}}
 .hero-title{font-size:clamp(2.2rem,7vw,4.1rem);font-weight:800;letter-spacing:-.02em;margin:2.2rem 0 .6rem;max-width:15ch}
 .hero-meta{margin:0;color:#DCE7F3;max-width:44rem}
 
 /* Tres acciones */
-.quick{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:-1.6rem;position:relative}
+.quick{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));margin-top:0rem;position:relative}
 .quick a{display:block;background:var(--card);color:var(--ink);text-decoration:none;border:1px solid var(--line);border-left:6px solid var(--gold);padding:1.1rem 1.2rem;border-radius:6px}
 .quick a:hover{border-color:var(--navy);border-left-color:var(--gold)}
 .quick .q{font-family:var(--display);font-weight:700;font-size:1.15rem;display:block;color:var(--navy)}
 .quick .a{display:block;color:var(--muted);font-size:.97rem;margin-top:.2rem}
 
-/* Calendrier */
+/* Cronograma */
 .weeks{list-style:none;margin:0;padding:0;counter-reset:w}
 .week{display:grid;grid-template-columns:4.2rem 1fr;gap:0 1.25rem;padding-bottom:2.25rem;position:relative}
 .week::before{content:"";position:absolute;left:2.05rem;top:4.2rem;bottom:0;width:2px;background:var(--line)}
@@ -88,7 +98,7 @@ nav.site a:hover{border-color:var(--gold)}
 .legend{font-size:.93rem;color:var(--muted);margin:0 0 1.5rem}
 .note{border-left:4px solid var(--line);padding:.2rem 0 .2rem 1rem;color:var(--muted);font-size:.95rem;max-width:44rem}
 
-/* Ressources */
+/* Recursos */
 .res-list{list-style:none;padding:0;margin:0;display:grid;gap:1rem}
 .res-list li{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1rem 1.2rem}
 .res-list .kind{font-size:.85rem;color:var(--muted);display:block}
@@ -134,256 +144,239 @@ footer p{max-width:46rem}
 @media print{
   header.top{background:none;color:#000}.quick,nav.site,#tareas,.skip{display:none}
 }
+/* Présentation harmonisée avec la version espagnole publiée */
+.hero-title{font-size:clamp(2rem,4.8vw,3.25rem);max-width:22ch;line-height:1.12;margin:1.5rem 0 .9rem}
+header.top .wrap{padding-top:1.1rem;padding-bottom:2rem}
+nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px}
+nav.site .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+nav.site ul{display:flex;align-items:center;justify-content:center;gap:8px 20px;flex-wrap:wrap}
+nav.site .home-link{color:white;text-decoration:none;white-space:nowrap;font-weight:700;border:1px solid #ffffff80;border-radius:7px;padding:5px 10px}
+nav.site .language-selector{display:flex;align-items:center;gap:8px;color:white;font-size:.95rem;white-space:nowrap}
+nav.site select{max-width:160px;padding:6px;border-radius:5px;background:white;color:#14202E}
+html{scroll-padding-top:115px}
+@media(max-width:650px){nav.site .nav-inner{justify-content:center}nav.site ul{order:3;width:100%}nav.site .language-selector{margin-left:auto}nav.site{padding:8px}html{scroll-padding-top:155px}}
 </style>
 </head>
 <body>
 <a class="skip" href="#principal">Aller au contenu</a>
+<nav aria-label="Sections du site" class="site"><div class="nav-inner"><a class="home-link" href="#inicio">🏠 Accueil</a><ul><li><a href="#cronograma">Calendrier</a></li><li><a href="#recursos">Ressources</a></li><li><a href="#contacto">Contact</a></li><li><a href="#tareas">Ma liste</a></li></ul><div class="language-selector"><label for="languageSelect">🌐 Langue:</label><select id="languageSelect" onchange="changeLanguage(this.value)"><option value="es">🇪🇸 Español</option><option value="en">🇬🇧 English</option><option selected="" value="fr">🇫🇷 Français</option><option value="pt">🇵🇹 Português</option></select></div></div></nav><header class="top">
+<div class="wrap" id="inicio">
+<div class="brand">
+<span><strong>UTPL</strong> · Modalité en ligne · Programme de technologies de l’information</span>
 
-<header class="top">
-  <div class="wrap">
-    <div class="brand">
-      <span><strong>UTPL</strong> · Modalité en ligne · Programme de technologies de l’information</span>
-      <div class="language-selector">
-  🌐 Langue :
-  <select id="languageSelect" onchange="changeLanguage(this.value)">
-    <option value="es">🇪🇸 Español</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="fr" selected>🇫🇷 Français</option>
-    <option value="pt">🇵🇹 Português</option>
-  </select>
+
 </div>
-      <nav class="site" aria-label="Sections du site">
-        <ul>
-          <li><a href="#cronograma">Calendrier</a></li>
-          <li><a href="#recursos">Ressources</a></li>
-          <li><a href="#contacto">Contact</a></li>
-          <li><a href="#tareas">Ma liste</a></li>
-        </ul>
-      </nav>
-    </div>
-    <h1 class="hero-title">Fondements des technologies de l’information</h1>
-   <div style="margin-top:18px;">
-  <p style="font-weight:700; margin-bottom:8px;">
+<h1 class="hero-title">Fondements des technologies de l’information</h1>
+<div style="margin-top:18px;">
+<p style="font-weight:700; margin-bottom:8px;">
     🎧 Écoutez le message de bienvenue du cours
   </p>
-
-  <audio controls preload="metadata">
-   <source src="Bienvenida-frances.mp3" type="audio/mpeg">
+<audio controls="" preload="metadata">
+<source src="Bienvenida-frances.mp3" type="audio/mpeg"/>
     Votre navigateur ne prend pas en charge la lecture audio.
   </audio>
-</div> 
-    <p class="hero-meta">COMP_1082 · Premier cycle · 3 créditos, 144 horas · Période avril–août 2026. Ce site résume les semaines 1 à 4 de la première période conformément au plan d’enseignement approuvé (Ata nº 21, 23-12-2025).</p>
-  </div>
+</div>
+<p class="hero-meta">COMP_1082 · Premier cycle · 3 crédits, 144 heures · Période avril–août 2026. Ce site résume les semaines 1 à 4 de la première période conformément au plan d’enseignement approuvé (procès-verbal nº 21, 23-12-2025).</p>
+</div>
 </header>
-
 <main id="principal">
-  <div class="wrap">
-    <nav class="quick" aria-label="Accès rapide">
-      <a href="#foro-von-neumann">
-        <span class="q">Quelle est l’activité évaluée ?</span>
-        <span class="a">Fórum: modelo de Von Neumann, de 27 de abril a 10 de maio de 2026.</span>
-      </a>
-      <a href="#cronograma">
-        <span class="q">Que dois-je étudier cette semaine ?</span>
-        <span class="a">Thèmes, lectures et activités des semaines 1 à 4.</span>
-      </a>
-      <a href="#contacto">
-        <span class="q">Comment contacter l’enseignante ?</span>
-        <span class="a">Séances de tutorat le lundi, de 17 h à 19 h, courriel et téléphone.</span>
-      </a>
-    </nav>
-
-    <section id="cronograma" aria-labelledby="t-crono" style="border-top:0">
-      <h2 id="t-crono">Calendrier das semaines 1 a 4</h2>
-      <p class="lede">Chaque semaine combine un tutorat en direct, des lectures du guide numérique et des activités sur l’EVA. Les heures indiquées correspondent aux estimations du plan d’enseignement.</p>
-      <p class="legend"><span class="tag acd">ACD</span> apprentissage en contact avec l’enseignante &nbsp; <span class="tag">AA</span> apprentissage autonome</p>
-      
-      <ol class="weeks">
-        <li class="week" id="semaine-1">
-          <div class="wk-num" aria-hidden="true"><small>semaine</small><b>1</b></div>
-          <div>
-            <h3>Évolution des technologies de l’information</h3>
-            <p class="unit">Unit 1. Historical Évolution des technologies de l’information</p>
-            <ul class="topics">
-              <li>1.1 Information et technologies de l’information dans la société</li>
-              <li>1.2 Évolution historique des technologies</li>
-            </ul>
-            <ul class="acts">
-              <li><span class="tag acd">ACD</span><span>Receber as boas-vindas e as orientações gerais durante a tutoria semainel.</span><span class="hrs">2 h</span><span class="res">Chat de tutoria ou videoconferência</span></li>
-              <li><span class="tag">AA</span><span>Identifier l’importance de l’information et des technologies de l’information.</span><span class="hrs">1,25 h</span><span class="res">Leitura: Unidade 1 do guia virtualizado</span></li>
-              <li><span class="tag">AA</span><span>Ler a mensagem de boas-vindas da professora e as orientações no anúncio semainel.</span><span class="hrs">2 h</span><span class="res">Avisos no EVA</span></li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="week" id="semaine-2">
-          <div class="wk-num" aria-hidden="true"><small>semaine</small><b>2</b></div>
-          <div>
-            <h3>Internet</h3>
-            <p class="unit">Unit 1. Historical Évolution des technologies de l’information</p>
-            <ul class="topics"><li>1.3 Internet</li></ul>
-            <ul class="acts">
-              <li><span class="tag acd">ACD</span><span>Participer à la séance de tutorat sur l’Unité 1 et clarifier les éventuelles questions.</span><span class="hrs">2 h</span><span class="res">Chat de tutoria, Semaine 2</span></li>
-              <li><span class="tag">AA</span><span>Completar o guia utilizando o vídeo curto e fazer anotações sobre datas, conceitos e exemplos.</span><span class="hrs">1 h</span><span class="res"><span class="res">Micro-video Unit 1: Évolution des technologies de l’information</span></span></li>
-              <li><span class="tag">AA</span><span>Réaliser l’autoévaluation de l’Unité 1.</span><span class="hrs">1,5 h</span><span class="res">Unidade 1 do guia virtualizado</span></li>
-              <li><span class="tag">AA</span><span>Réaliser les activités proposées dans l’Unité 1.</span><span class="hrs">1,25 h</span><span class="res">Unidade 1 do guia virtualizado</span></li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="week" id="semaine-3">
-          <div class="wk-num" aria-hidden="true"><small>semaine</small><b>3</b></div>
-          <div>
-            <h3>Infrastructure informatique</h3>
-            <p class="unit">Unidade 2. Infrastructure des technologies de l’information</p>
-            <ul class="topics">
-              <li>2.1 Concept and Evolution of Infrastructure informatique</li>
-              <li>2.2 Fondements du matériel et des réseaux</li>
-              <li>2.3 Logiciels et systèmes de stockage</li>
-            </ul>
-            <ul class="acts">
-              <li><span class="tag acd">ACD</span><span>Participer au tutorat : synthèse de l’Unité 2 et orientations pour la semaine.</span><span class="hrs">2 h</span><span class="res">Chat da tutoria semainel (EVA)</span></li>
-              <li><span class="tag">AA</span><span>Décrire les technologies émergentes ou de rupture présentées dans l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Leitura: Unidade 2 do guia virtualizado</span></li>
-              <li><span class="tag">AA</span><span>Renforcer le contenu au moyen des activités proposées dans l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Unidade 2 do guia virtualizado</span></li>
-              <li><span class="tag">AA</span><span>Consulter les annonces et l’enregistrement du tutorat précédent.</span><span class="hrs">1 h</span><span class="res">Avisos no EVA</span></li>
-              <li><span class="tag">AA</span><span>Interagir com os recursos disponibilizados no anúncio semainel.</span><span class="hrs">1 h</span><span class="res">Microvídeo (no anúncio semainel)</span></li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="week" id="semaine-4">
-          <div class="wk-num" aria-hidden="true"><small>semaine</small><b>4</b></div>
-          <div>
-            <h3>Types d’infrastructure et modèle de Von Neumann</h3>
-            <p class="unit">Unidade 2. Infrastructure des technologies de l’information</p>
-            <ul class="topics">
-              <li>2.4 Types d’infrastructure</li>
-              <li>2.5 Conception et mise en œuvre des ressources</li>
-            </ul>
-            <ul class="acts">
-              <li><span class="tag acd">ACD</span><span>Participer au tutorat de la semaine 4 et clarifier les questions sur les thèmes étudiés jusqu’à présent.</span><span class="hrs">2 h</span><span class="res">Chat da tutoria semainel (EVA)</span></li>
-              <li class="graded" id="foro-von-neumann">
-                <span class="tag acd">ACD</span>
-                <span><strong>Forum évalué: Analyse d’un dispositif à l’aide du modèle de Von Neumann</strong></span>
-                <span class="hrs">8 h</span>
-                <span class="when">27 de abril a 10 de maio de 2026 · 3,5 pontos (35% do primeiro bimestre)</span>
-                <span class="res">Escolha um dispositivo de uso cotidiano ou empresarial (por exemplo, um smartphone, um servidor ou um dispositivo IoT). Represente graficamente seu fluxo de dados.</span>
-                <details class="rubric">
-                  <summary>Voir la grille de vérification (10 pontos)</summary>
-                  <table>
-                    <tbody>
-                      <tr><td>Seleção e descrição do dispositivo</td><td>2,5</td></tr>
-                      <tr><td>Identifica os 4 elementos do modelo de Von Neumann no dispositivo</td><td>2,5</td></tr>
-                      <tr><td>Diagrama com os elementos e sua descrição</td><td>2,5</td></tr>
-                      <tr><td>Feedback sobre a contribuição de um colega</td><td>2,5</td></tr>
-                    </tbody>
-                  </table>
-                </details>
-              </li>
-              <li><span class="tag">AA</span><span>Revisar as atividades semaineis nos avisos.</span><span class="hrs">1 h</span><span class="res">Avisos no EVA</span></li>
-              <li><span class="tag">AA</span><span>Réaliser l’autoévaluation de l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Autoavaliação da Unidade 2</span></li>
-            </ul>
-          </div>
-        </li>
-      </ol>
-      <p class="note">O plano da disciplina estabelece datas apenas para as atividades avaliadas; as datas de início das semaines 1 a 3 são publicadas no EVA. Em caso de divergência, prevalecem o plano de ensino aprovado e as orientações da professora no EVA.</p>
-    </section>
-
-    <section id="recursos" aria-labelledby="t-rec">
-      <h2 id="t-rec">Ressources</h2>
-      <p class="lede">Bibliographie e recursos educacionais abertos do plano da disciplina. Os recursos da biblioteca virtual podem exigir autenticação na UTPL.</p>
-      <ul class="res-list">
-        <li>
-          <span class="kind">Bibliographie obrigatória · disponível no EVA</span>
-          <strong>Rodríguez, G. (2026). Guía virtualizada Fundamentos de Tecnologías de la Información.</strong> Editorial UTPL.
-          <p>Conteúdo da disciplina, atividades de reforço e autoavaliações de cada unidade.</p>
-        </li>
-        <li>
-          <span class="kind">Bibliographie complementar · Biblioteca Virtual da UTPL</span>
-          <a href="https://visorweb.utpl.edu.ec/reader/sistemas-de-informacion-gerencial-1718287975">Laudon, K. y Romero, A. (2012). Sistemas de información gerencial. Pearson.</a>
-          <p>Útil para as semaines 2 a 4: evolução da infraestrutura de TI e marcos na história da Internet.</p>
-        </li>
-        <li>
-          <span class="kind">Bibliographie complementar · Biblioteca Virtual da UTPL</span>
-          <a href="https://ebookcentral.proquest.com/lib/utpl/reader.action?docID=875861">Stewart, J. M., Chapple, M. y Gibson, D. (2012). CISSP Study Guide. Wiley.</a>
-          <p>Aprofunda o estudo da segurança da informação e da certificação nessa área.</p>
-        </li>
-        <li>
-          <span class="kind">Ressource éducative libre · Prezi</span>
-          <a href="https://prezi.com/p/2kjyj-f76wwi/fundamentos-de-tecnologias-de-la-informacion/">Presentación interactiva: las tecnologías de la información, su importancia y componentes</a>
-        </li>
-        <li>
-          <span class="kind">Ressource éducative libre · vídeo do YouTube</span>
-          <a href="https://www.youtube.com/watch?v=31q9hnrd3u0">Software: definição e desenvolvimento, engenharia de software</a>
-        </li>
-      </ul>
-      <p class="note">É obrigatório utilizar pelo menos dois recursos educacionais abertos por bimestre.</p>
-    </section>
-
-    <section id="contacto" aria-labelledby="t-con">
-      <h2 id="t-con">Contact com a professora</h2>
-      <p class="lede">Para dúvidas acadêmicas, utilize primeiro a sessão de tutoria ou as mensagens do EVA; o e-mail institucional deve ser usado para assuntos específicos.</p>
-      <div class="contact">
-        <div class="tutoria">
-          Sessão de tutoria semainel · Turma 100
-          <span class="big">Segunda-feira, das 17:00 às 19:00</span>
-          Virtual session. Recordings are posted in the Avisos no EVA.
+<div class="wrap">
+<nav aria-label="Accès rapide" class="quick">
+<a href="#foro-von-neumann">
+<span class="q">Quelle est l’activité évaluée ?</span>
+<span class="a">Forum : modèle de Von Neumann, du 27 avril au 10 mai 2026.</span>
+</a>
+<a href="#cronograma">
+<span class="q">Que dois-je étudier cette semaine ?</span>
+<span class="a">Thèmes, lectures et activités des semaines 1 à 4.</span>
+</a>
+<a href="#contacto">
+<span class="q">Comment contacter l’enseignante ?</span>
+<span class="a">Séances de tutorat le lundi, de 17 h à 19 h, courriel et téléphone.</span>
+</a>
+</nav>
+<section aria-labelledby="t-crono" id="cronograma" style="border-top:0">
+<h2 id="t-crono">Calendrier des semaines 1 à 4</h2>
+<p class="lede">Chaque semaine combine un tutorat en direct, des lectures du guide numérique et des activités sur l’EVA. Les heures indiquées correspondent aux estimations du plan d’enseignement.</p>
+<p class="legend"><span class="tag acd">ACD</span> apprentissage en contact avec l’enseignante   <span class="tag">AA</span> apprentissage autonome</p>
+<ol class="weeks">
+<li class="week" id="semaine-1">
+<div aria-hidden="true" class="wk-num"><small>semaine</small><b>1</b></div>
+<div>
+<h3>Évolution des technologies de l’information</h3>
+<p class="unit">Unité 1. Évolution historique des technologies de l’information</p>
+<ul class="topics">
+<li>1.1 Information et technologies de l’information dans la société</li>
+<li>1.2 Évolution historique des technologies</li>
+</ul>
+<ul class="acts">
+<li><span class="tag acd">ACD</span><span>Prendre connaissance du message de bienvenue et des consignes générales pendant le tutorat hebdomadaire.</span><span class="hrs">2 h</span><span class="res">Messagerie de tutorat ou visioconférence</span></li>
+<li><span class="tag">AA</span><span>Identifier l’importance de l’information et des technologies de l’information.</span><span class="hrs">1,25 h</span><span class="res">Lecture : unité 1 du guide numérique</span></li>
+<li><span class="tag">AA</span><span>Lire le message de bienvenue et les consignes de l’enseignante dans l’annonce hebdomadaire.</span><span class="hrs">2 h</span><span class="res">Annonces sur l’EVA</span></li>
+</ul>
+</div>
+</li>
+<li class="week" id="semaine-2">
+<div aria-hidden="true" class="wk-num"><small>semaine</small><b>2</b></div>
+<div>
+<h3>Internet</h3>
+<p class="unit">Unité 1. Évolution historique des technologies de l’information</p>
+<ul class="topics"><li>1.3 Internet</li></ul>
+<ul class="acts">
+<li><span class="tag acd">ACD</span><span>Participer à la séance de tutorat sur l’Unité 1 et clarifier les éventuelles questions.</span><span class="hrs">2 h</span><span class="res">Messagerie de tutorat, semaine 2</span></li>
+<li><span class="tag">AA</span><span>Compléter la lecture du guide à l’aide de la courte vidéo et noter les dates, concepts et exemples.</span><span class="hrs">1 h</span><span class="res">Courte vidéo de l’unité 1 : évolution des technologies de l’information (dans l’annonce hebdomadaire)</span></li>
+<li><span class="tag">AA</span><span>Réaliser l’autoévaluation de l’Unité 1.</span><span class="hrs">1,5 h</span><span class="res">Unité 1 du guide numérique</span></li>
+<li><span class="tag">AA</span><span>Réaliser les activités proposées dans l’Unité 1.</span><span class="hrs">1,25 h</span><span class="res">Unité 1 du guide numérique</span></li>
+</ul>
+</div>
+</li>
+<li class="week" id="semaine-3">
+<div aria-hidden="true" class="wk-num"><small>semaine</small><b>3</b></div>
+<div>
+<h3>Infrastructure informatique</h3>
+<p class="unit">Unité 2. Infrastructure des technologies de l’information</p>
+<ul class="topics">
+<li>2.1 Concept et évolution de l’infrastructure informatique</li>
+<li>2.2 Fondements du matériel et des réseaux</li>
+<li>2.3 Logiciels et systèmes de stockage</li>
+</ul>
+<ul class="acts">
+<li><span class="tag acd">ACD</span><span>Participer au tutorat : synthèse de l’Unité 2 et orientations pour la semaine.</span><span class="hrs">2 h</span><span class="res">Messagerie du tutorat hebdomadaire (EVA)</span></li>
+<li><span class="tag">AA</span><span>Décrire les technologies émergentes ou de rupture présentées dans l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Lecture : unité 2 du guide numérique</span></li>
+<li><span class="tag">AA</span><span>Renforcer le contenu au moyen des activités proposées dans l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Unité 2 du guide numérique</span></li>
+<li><span class="tag">AA</span><span>Consulter les annonces et l’enregistrement du tutorat précédent.</span><span class="hrs">1 h</span><span class="res">Annonces sur l’EVA</span></li>
+<li><span class="tag">AA</span><span>Explorer les ressources présentées dans l’annonce hebdomadaire.</span><span class="hrs">1 h</span><span class="res">Courte vidéo (dans l’annonce hebdomadaire)</span></li>
+</ul>
+</div>
+</li>
+<li class="week" id="semaine-4">
+<div aria-hidden="true" class="wk-num"><small>semaine</small><b>4</b></div>
+<div>
+<h3>Types d’infrastructure et modèle de Von Neumann</h3>
+<p class="unit">Unité 2. Infrastructure des technologies de l’information</p>
+<ul class="topics">
+<li>2.4 Types d’infrastructure</li>
+<li>2.5 Conception et mise en œuvre des ressources</li>
+</ul>
+<ul class="acts">
+<li><span class="tag acd">ACD</span><span>Participer au tutorat de la semaine 4 et clarifier les questions sur les thèmes étudiés jusqu’à présent.</span><span class="hrs">2 h</span><span class="res">Messagerie du tutorat hebdomadaire (EVA)</span></li>
+<li class="graded" id="foro-von-neumann">
+<span class="tag acd">ACD</span>
+<span><strong>Forum évalué: Analyse d’un dispositif à l’aide du modèle de Von Neumann</strong></span>
+<span class="hrs">8 h</span>
+<span class="when">Du 27 avril au 10 mai 2026 · 3,5 points (35 % du premier bimestre)</span>
+<span class="res">Choisissez un appareil courant ou professionnel (smartphone, serveur ou objet connecté, par exemple). Représentez son flux de données selon le modèle entrée–traitement–sortie et identifiez les composants matériels correspondant aux quatre unités de Von Neumann : mémoire principale, unité arithmétique et logique, unité de contrôle et entrée/sortie. Présentez un schéma annoté ou une infographie avec une brève description technique. Déposez votre contribution sur le forum de l’EVA.</span>
+<details class="rubric">
+<summary>Voir la grille de vérification (10 points)</summary>
+<table>
+<tbody>
+<tr><td>Choix et description de l’appareil</td><td>2,5</td></tr>
+<tr><td>Identification des quatre éléments du modèle de Von Neumann dans l’appareil</td><td>2,5</td></tr>
+<tr><td>Schéma des éléments accompagné de leur description</td><td>2,5</td></tr>
+<tr><td>Retour constructif sur la contribution d’un camarade</td><td>2,5</td></tr>
+</tbody>
+</table>
+</details>
+</li>
+<li><span class="tag">AA</span><span>Consulter les activités de la semaine dans les annonces.</span><span class="hrs">1 h</span><span class="res">Annonces sur l’EVA</span></li>
+<li><span class="tag">AA</span><span>Réaliser l’autoévaluation de l’Unité 2.</span><span class="hrs">2 h</span><span class="res">Autoévaluation de l’unité 2</span></li>
+</ul>
+</div>
+</li>
+</ol>
+<p class="note">Le plan du cours précise les dates uniquement pour les activités évaluées ; les dates de début des semaines 1 à 3 sont publiées sur l’EVA. En cas de divergence, le plan approuvé et les consignes de l’enseignante sur l’EVA font foi.</p>
+</section>
+<section aria-labelledby="t-rec" id="recursos">
+<h2 id="t-rec">Ressources</h2>
+<p class="lede">Bibliographie et ressources éducatives libres prévues dans le plan du cours. Les ressources de la bibliothèque numérique peuvent nécessiter une connexion UTPL.</p>
+<ul class="res-list">
+<li>
+<span class="kind">Bibliographie principale · disponible sur l’EVA</span>
+<strong>Rodríguez, G. (2026). Guía virtualizada Fundamentos de Tecnologías de la Información.</strong> Editorial UTPL.
+          <p>Contenus du cours, activités de consolidation et autoévaluations de chaque unité.</p>
+</li>
+<li>
+<span class="kind">Bibliographie complémentaire · bibliothèque numérique UTPL</span>
+<a href="https://visorweb.utpl.edu.ec/reader/sistemas-de-informacion-gerencial-1718287975">Laudon, K. y Romero, A. (2012). Sistemas de información gerencial. Pearson.</a>
+<p>Utile pour les semaines 2 à 4 : évolution de l’infrastructure informatique et grandes étapes de l’histoire d’Internet.</p>
+</li>
+<li>
+<span class="kind">Bibliographie complémentaire · bibliothèque numérique UTPL</span>
+<a href="https://ebookcentral.proquest.com/lib/utpl/reader.action?docID=875861">Stewart, J. M., Chapple, M. y Gibson, D. (2012). CISSP Study Guide. Wiley.</a>
+<p>Approfondit la sécurité de l’information et les certifications dans ce domaine.</p>
+</li>
+<li>
+<span class="kind">Ressource éducative libre · Prezi</span>
+<a href="https://prezi.com/p/2kjyj-f76wwi/fundamentos-de-tecnologias-de-la-informacion/">Présentation interactive : technologies de l’information, importance et composantes</a>
+</li>
+<li>
+<span class="kind">Ressource éducative libre · vídeo do YouTube</span>
+<a href="https://www.youtube.com/watch?v=31q9hnrd3u0">Logiciels : définition, développement et génie logiciel</a>
+</li>
+</ul>
+<p class="note">L’utilisation d’au moins deux ressources éducatives libres par bimestre est obligatoire.</p>
+</section>
+<section aria-labelledby="t-con" id="contacto">
+<h2 id="t-con">Contacter l’enseignante</h2>
+<p class="lede">Pour toute question pédagogique, privilégiez le tutorat ou la messagerie de l’EVA ; utilisez le courriel institutionnel pour les demandes particulières.</p>
+<div class="contact">
+<div class="tutoria">
+          Tutorat hebdomadaire · groupe 100
+          <span class="big">Lundi, de 17 h à 19 h</span>
+          Virtual session. Recordings are posted in the Annonces sur l’EVA.
         </div>
-        <dl>
-          <dt>Enseignante</dt><dd>Dra. Germania del Rocío Rodríguez Morales</dd>
-          <dt>Email</dt><dd><a href="mailto:grrodriguez@utpl.edu.ec">grrodriguez@utpl.edu.ec</a></dd>
-          <dt>Téléphone</dt><dd><a href="tel:+59373701444">07 370 1444</a>, ext. 2521</dd>
-          <dt>Département</dt><dd>Ciência da Computação e Eletrônica</dd>
-        </dl>
-      </div>
-    </section>
-
-    <section id="tareas" aria-labelledby="t-tar">
-      <h2 id="t-tar">Ma liste de tarefas (opcional)</h2>
-      <div class="warn" role="note">
-        <strong>Cette liste sert uniquement de rappel personnel.</strong>
-        <p>Marcar uma tarefa aqui não a envia nem cria um registro acadêmico. As atividades e notas são gerenciadas exclusivamente no EVA. As marcações ficam armazenadas apenas neste navegador e serão perdidas se você limpar os dados de navegação.</p>
-      </div>
-      <div class="bar">
-        <span class="progress" id="progress" aria-live="polite">0 de 0 marcadas</span>
-        <button type="button" id="reset">Tout décocher</button>
-        <span id="storage-msg"></span>
-      </div>
-      <form id="todo" onsubmit="return false">
-        <fieldset><legend>Semaine 1</legend>
-          <label class="check"><input type="checkbox" data-id="s1-tutoria"><span>Participer au tutorat de bienvenue</span></label>
-          <label class="check"><input type="checkbox" data-id="s1-lectura"><span>Lire l’Unité 1 (tópicos 1.1 e 1.2)</span></label>
-          <label class="check"><input type="checkbox" data-id="s1-anuncio"><span>Ler o anúncio de boas-vindas no EVA</span></label>
-        </fieldset>
-        <fieldset><legend>Semaine 2</legend>
-          <label class="check"><input type="checkbox" data-id="s2-tutoria"><span>Participar da tutoria da Semaine 2</span></label>
-          <label class="check"><input type="checkbox" data-id="s2-video"><span>Assistir ao microvídeo da Unidade 1 e fazer anotações</span></label>
-          <label class="check"><input type="checkbox" data-id="s2-autoeval"><span>Realizar a autoavaliação da Unidade 1</span></label>
-          <label class="check"><input type="checkbox" data-id="s2-activ"><span>Réaliser les activités de l’Unité 1</span></label>
-        </fieldset>
-        <fieldset><legend>Semaine 3</legend>
-          <label class="check"><input type="checkbox" data-id="s3-tutoria"><span>Participar da tutoria (revisão da Unidade 2)</span></label>
-          <label class="check"><input type="checkbox" data-id="s3-caract"><span>Identificar tecnologias emergentes da Unidade 2</span></label>
-          <label class="check"><input type="checkbox" data-id="s3-activ"><span>Réaliser les activités de l’Unité 2</span></label>
-          <label class="check"><input type="checkbox" data-id="s3-grabacion"><span>Assistir à gravação da tutoria anterior</span></label>
-        </fieldset>
-        <fieldset><legend>Semaine 4</legend>
-          <label class="check"><input type="checkbox" data-id="s4-tutoria"><span>Participar da tutoria da Semaine 4</span></label>
-          <label class="check"><input type="checkbox" data-id="s4-foro"><span>Publicar minha contribuição no fórum de Von Neumann no EVA (até 10 de maio)</span></label>
-          <label class="check"><input type="checkbox" data-id="s4-retro"><span>Dar feedback sobre a contribuição de um colega no fórum</span></label>
-          <label class="check"><input type="checkbox" data-id="s4-autoeval"><span>Complete the Autoavaliação da Unidade 2</span></label>
-        </fieldset>
-      </form>
-    </section>
-  </div>
+<dl>
+<dt>Enseignante</dt><dd>Dra. Germania del Rocío Rodríguez Morales</dd>
+<dt>Email</dt><dd><a href="mailto:grrodriguez@utpl.edu.ec">grrodriguez@utpl.edu.ec</a></dd>
+<dt>Téléphone</dt><dd><a href="tel:+59373701444">07 370 1444</a>, ext. 2521</dd>
+<dt>Département</dt><dd>Informatique et électronique</dd>
+</dl>
+</div>
+</section>
+<section aria-labelledby="t-tar" id="tareas">
+<h2 id="t-tar">Ma liste de tâches (facultatif)</h2>
+<div class="warn" role="note">
+<strong>Cette liste sert uniquement de rappel personnel.</strong>
+<p>Cocher une tâche ici ne constitue ni une remise de travail ni un enregistrement académique. Les devoirs et les notes sont gérés exclusivement sur l’EVA. Les cases cochées sont enregistrées uniquement dans ce navigateur et seront perdues si vous effacez ses données.</p>
+</div>
+<div class="bar">
+<span aria-live="polite" class="progress" id="progress">0 tâche cochée sur 0</span>
+<button id="reset" type="button">Tout décocher</button>
+<span id="storage-msg"></span>
+</div>
+<form id="todo" onsubmit="return false">
+<fieldset><legend>Semaine 1</legend>
+<label class="check"><input data-id="s1-tutoria" type="checkbox"/><span>Participer au tutorat de bienvenue</span></label>
+<label class="check"><input data-id="s1-lectura" type="checkbox"/><span>Lire l’unité 1 (thèmes 1.1 et 1.2)</span></label>
+<label class="check"><input data-id="s1-anuncio" type="checkbox"/><span>Lire l’annonce de bienvenue sur l’EVA</span></label>
+</fieldset>
+<fieldset><legend>Semaine 2</legend>
+<label class="check"><input data-id="s2-tutoria" type="checkbox"/><span>Participer au tutorat de la semaine 2</span></label>
+<label class="check"><input data-id="s2-video" type="checkbox"/><span>Regarder la courte vidéo de l’unité 1 et prendre des notes</span></label>
+<label class="check"><input data-id="s2-autoeval" type="checkbox"/><span>Effectuer l’autoévaluation de l’unité 1</span></label>
+<label class="check"><input data-id="s2-activ" type="checkbox"/><span>Réaliser les activités de l’unité 1</span></label>
+</fieldset>
+<fieldset><legend>Semaine 3</legend>
+<label class="check"><input data-id="s3-tutoria" type="checkbox"/><span>Participer au tutorat (révision de l’unité 2)</span></label>
+<label class="check"><input data-id="s3-caract" type="checkbox"/><span>Identifier les technologies émergentes de l’unité 2</span></label>
+<label class="check"><input data-id="s3-activ" type="checkbox"/><span>Réaliser les activités de l’unité 2</span></label>
+<label class="check"><input data-id="s3-grabacion" type="checkbox"/><span>Regarder l’enregistrement du tutorat précédent</span></label>
+</fieldset>
+<fieldset><legend>Semaine 4</legend>
+<label class="check"><input data-id="s4-tutoria" type="checkbox"/><span>Participer au tutorat de la semaine 4</span></label>
+<label class="check"><input data-id="s4-foro" type="checkbox"/><span>Publier ma contribution au forum Von Neumann sur l’EVA (avant le 10 mai)</span></label>
+<label class="check"><input data-id="s4-retro" type="checkbox"/><span>Donner un retour sur la contribution d’un camarade au forum</span></label>
+<label class="check"><input data-id="s4-autoeval" type="checkbox"/><span>Complete the Autoévaluation de l’unité 2</span></label>
+</fieldset>
+</form>
+</section>
+</div>
 </main>
-
 <footer>
-  <div class="wrap">
-    <p>Site informativo desenvolvido com base no plano de ensino da disciplina para o período acadêmico abril–agosto de 2026. Não coleta dados pessoais nem substitui o EVA, que é o canal oficial para entregas, notas e avisos.</p>
-  </div>
+<div class="wrap">
+<p>Site informatif élaboré à partir du plan du cours pour la période avril–août 2026. Il ne collecte aucune donnée personnelle et ne remplace pas l’EVA, plateforme officielle pour les devoirs, notes et annonces.</p>
+</div>
 </footer>
-
 <script>
 (function(){
   var KEY = 'fti-utpl-2026-lista';
@@ -404,7 +397,7 @@ footer p{max-width:46rem}
   }
   function update(){
     var n = boxes.filter(function(b){ return b.checked; }).length;
-    progress.textContent = n + ' de ' + boxes.length + ' marcadas';
+    progress.textContent = n + ' tâche(s) cochée(s) sur ' + boxes.length;
   }
 
   boxes.forEach(function(b){
@@ -429,7 +422,6 @@ footer p{max-width:46rem}
 <button id="voiceBtn" type="button">
   🔊 Lire à voix haute
 </button>
-
 <style>
   #voiceBtn {
     position: fixed;
@@ -451,7 +443,6 @@ footer p{max-width:46rem}
     opacity: 0.9;
   }
 </style>
-
 <script>
 (function () {
   const btn = document.getElementById("voiceBtn");
@@ -502,7 +493,7 @@ footer p{max-width:46rem}
   });
 })();
 </script>
-  <script>
+<script>
 function changeLanguage(lang) {
   if (lang === "es") {
     window.location.href = "index.html";
