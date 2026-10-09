@@ -164,6 +164,7 @@ nav.site ul {
 nav.site a {
   color: #ffffff;
 }
+nav.site{position:sticky;top:0;z-index:9999;background:#0B3C6E;padding:10px 16px}nav.site .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}nav.site ul{display:flex;align-items:center;justify-content:center;gap:8px 20px;flex-wrap:wrap}nav.site .home-link{color:white;text-decoration:none;white-space:nowrap;font-weight:700;border:1px solid #ffffff80;border-radius:7px;padding:5px 10px}nav.site .language-selector{display:flex;align-items:center;gap:8px;color:white;font-size:.95rem;white-space:nowrap}nav.site select{max-width:160px;padding:6px;border-radius:5px;background:white;color:#14202E}html{scroll-padding-top:115px}@media(max-width:650px){nav.site .nav-inner{justify-content:center}nav.site ul{order:3;width:100%}nav.site .language-selector{margin-left:auto}nav.site{padding:8px}html{scroll-padding-top:155px}}
 </style>
   
 </head>
@@ -171,18 +172,10 @@ nav.site a {
 <a class="skip" href="#principal">Saltar al contenido</a>
 
 <header class="top">
-  <div class="wrap">
+  <div class="wrap" id="inicio">
     <div class="brand">
       <span><strong>UTPL</strong> · Modalidad en línea · Carrera de Tecnologías de la Información</span>
-      <div class="language-selector">
-  🌐 Idioma:
-  <select id="languageSelect" onchange="changeLanguage(this.value)">
-    <option value="es" selected>🇪🇸 Español</option>
-    <option value="en">🇬🇧 English</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="pt">🇵🇹 Português</option>
-  </select>
-</div>
+      
      
     </div>
     <h1 class="hero-title">Fundamentos de Tecnologías de la Información</h1>
@@ -199,14 +192,11 @@ nav.site a {
     <p class="hero-meta">COMP_1082 · Primer ciclo · 3 créditos, 144 horas · Período abril–agosto 2026. Este sitio resume las semanas 1 a 4 del primer bimestre según el plan docente aprobado (Acta n.º 21, 23-12-2025).</p>
   </div>
 </header>
-<nav class="site" aria-label="Secciones del sitio">
-  <ul>
-    <li><a href="#cronograma">Cronograma</a></li>
-    <li><a href="#recursos">Recursos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="#tareas">Mi lista</a></li>
-  </ul>
-</nav>
+<nav class="site" aria-label="Secciones del sitio"><div class="nav-inner">
+<a class="home-link" href="#inicio">🏠 Inicio</a>
+<ul><li><a href="#cronograma">Cronograma</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#contacto">Contacto</a></li><li><a href="#tareas">Mi lista</a></li></ul>
+<div class="language-selector"><label for="languageSelect">🌐 Idioma:</label><select id="languageSelect" onchange="changeLanguage(this.value)"><option value="es" selected>🇪🇸 Español</option><option value="en">🇬🇧 English</option><option value="fr">🇫🇷 Français</option><option value="pt">🇵🇹 Português</option></select></div>
+</div></nav>
 <main id="principal">
   <div class="wrap">
     <nav class="quick" aria-label="Accesos rápidos">
